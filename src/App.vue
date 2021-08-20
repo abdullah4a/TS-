@@ -40,5 +40,7 @@ li {
 a {
   color: #42b983;
 }
-
+.btn {
+  padding: 10px;
+}
 </style>

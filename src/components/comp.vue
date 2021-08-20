@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button @onClick="CallaFuntion">Show</button>
+    <button class="btn" @click="NameFunction">Show</button>
   </div>
 </template>
 
@@ -11,8 +11,8 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import baseClass from "./classes/baseClass";
 @Component
 export default class HelloWorld extends baseClass {
-  CallaFuntion() {
-    alert("The Class is");
+  NameFunction() {
+    this.functionName();
   }
 }
 </script>
