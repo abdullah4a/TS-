@@ -4,7 +4,7 @@ export default class baseClass extends Vue {
   private msg = "Hello to Vue Ts";
   private Name = "";
   functionName(): string {
-    this.Name = prompt("Enter Name:");
+    this.Name = "";
     // alert(name);
     return this.Name;
   }

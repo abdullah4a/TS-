@@ -1,22 +1,12 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <comp />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
-
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import comp from "./components/comp.vue";
-
-@Component({
-  components: {
-    comp,
-  },
-})
-export default class App extends Vue {}
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -24,23 +14,60 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-h3 {
-  margin: 40px 0 0;
+.login {
+  float: right;
+  margin: 15px 2px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.login .btn {
+  font-size: 18px;
+  padding: 3px 12px;
+  color: aliceblue;
+  border-radius: 5px;
+  background: rgb(4, 100, 4);
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+#nav {
+  padding: 30px;
 }
-a {
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
   color: #42b983;
 }
-.btn {
-  padding: 10px;
+form {
+  margin: 2% 10%;
+  width: 80%;
+}
+input[type="text"],
+[type="password"],
+[type="email"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+[type="button"] {
+  width: 20%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
 </style>
