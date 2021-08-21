@@ -21,10 +21,13 @@
 }
 .login .btn {
   font-size: 18px;
-  padding: 3px 12px;
+  padding: 4px 15px;
   color: aliceblue;
   border-radius: 5px;
   background: rgb(4, 100, 4);
+}
+.login .btn:hover {
+  box-shadow: 4px 9px rgb(133, 133, 133);
 }
 #nav {
   padding: 30px;
