@@ -9,7 +9,7 @@
     <button class="btn" @click="NameFunction">Enter Name</button>
     <div v-if="NamesArray">
       <h2>Entered Names are in Here :</h2>
-      <h5 v-for="arr in NamesArray" :key="arr">{{ arr }}</h5>
+      <h5 v-for="arr in NamesArray" :key="arr.id">{{ arr }}</h5>
     </div>
   </div>
 </template>
